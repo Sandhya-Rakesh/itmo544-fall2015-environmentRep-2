@@ -1,7 +1,9 @@
 #!bin/bash
 
 sudo apt-get update -y
-sudo apt-get install -y apache2 git php5 php5-curl curl mysql-client php5-mysql
+sudo apt-get install -y apache2 git php5 php5-curl curl mysql-client php5-mysql php5-imagick
+
+sudo service apache2 reload
 
 curl -sS https://getcomposer.org/installer | sudo php &> /tmp/getcomposer.txt
 sudo php composer.phar require aws/aws-sdk-php &> /tmp/runcomposer.txt
